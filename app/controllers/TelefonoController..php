@@ -4,8 +4,8 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 // En TelefonoController.php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/eysphp/config/database.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/eysphp/app/models/Telefono.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/eysphp5bapple/config/database.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/eysphp5bapple/app/models/Telefono.php';
 
 class TelefonoController {
     private $telefono;
