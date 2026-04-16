@@ -1,5 +1,3 @@
 git remote add origin https://github.com/EdwinG2001/eysphp5bapple.git
 git push -u origin main
 
-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
-Token de GIT
