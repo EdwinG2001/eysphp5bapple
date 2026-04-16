@@ -10,12 +10,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/eysphp5bapple/app/models/Telefono.php
 class TelefonoController {
     private $telefono;
     private $db;
-
     public function __construct() {
         $this->db = (new Database())->getConnection();
         $this->telefono = new Telefono($this->db);
     }
 
+    
     // Mostrar todos los teléfonos
     public function index() {
         $telefonos = $this->telefono->read();

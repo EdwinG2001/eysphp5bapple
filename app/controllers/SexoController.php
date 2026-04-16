@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <?php
 // MEJORAS EN VISUAL CODE realizado por stalin francis
-// fecha: 2026-04-14
+// San Lucas Arroyo Edwin Guillermo Prueba de control de versiones con git y github
+// fecha: 2026-04-16
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+
 // En SexoController.php
-// San Lucas Arroyo Edwin Guillermo (PRUEBA DE PUSH 2)
-//Soy Milena
 require_once $_SERVER['DOCUMENT_ROOT'] . '/eysphp5bapple/config/database.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/eysphp5bapple/app/models/Sexo.php';
 
