@@ -53,10 +53,11 @@ public function create() {
 }
 
 
-public function edit($id) {
+public function edit($idsexo) {
 
 // Pasar el ID al modelo antes de llamar a readOne()
-        $this->sexo->id = $id;
+        $this->sexo->idsexo = $idsexo;
+        $this->sexo->id = $idsexo;
         $sexo = $this->sexo->readOne();
 
         if (!$sexo) {
@@ -68,10 +69,11 @@ public function edit($id) {
 
 
 
-public function eliminar($id) {
+public function eliminar($idsexo) {
 
 // Pasar el ID al modelo antes de llamar a readOne()
-        $this->sexo->id = $id;
+        $this->sexo->idsexo = $idsexo;
+        $this->sexo->id = $idsexo;
         $sexo = $this->sexo->readOne();
 
         if (!$sexo) {
@@ -92,7 +94,13 @@ public function update() {
         echo "Formulario recibido";  // Verificar si llega el formulario
         if (isset($_POST['nombre'])) {
             $this->sexo->nombre = $_POST['nombre'];
-            $this->sexo->id = $_POST['id'];
+            if (isset($_POST['idsexo'])) {
+                $this->sexo->idsexo = $_POST['idsexo'];
+                $this->sexo->id = $_POST['idsexo'];
+            } elseif (isset($_POST['id'])) {
+                $this->sexo->idsexo = $_POST['id'];
+                $this->sexo->id = $_POST['id'];
+            }
             if ($this->sexo->update()) {
                 echo "Sexo actualizado exitosamente";
                 // Redirigir o mostrar un mensaje de éxito
@@ -118,19 +126,20 @@ public function update() {
     // Eliminar un sexo
     public function delete() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (isset($_POST['id'])) {
+        if (isset($_POST['idsexo'])) {
+            $this->sexo->idsexo = $_POST['idsexo'];
+            $this->sexo->id = $_POST['idsexo'];
+        } elseif (isset($_POST['id'])) {
+            $this->sexo->idsexo = $_POST['id'];
             $this->sexo->id = $_POST['id'];
+        }
         if ($this->sexo->delete()) {
-                echo "Sexo borrado exitosamente";
-		die();
+            echo "Sexo borrado exitosamente";
             header('Location: index.php?msg=deleted');
             exit;
         } else {
             header('Location: index.php?msg=error');
             exit;
-        }
-} else {
-            echo "Faltan datos";
         }
     } else {
         echo "Método incorrecto";  // Verificar que el formulario no se envíe con GET
