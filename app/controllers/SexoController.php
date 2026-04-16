@@ -5,6 +5,7 @@
 // San Lucas Arroyo Edwin Guillermo Prueba de control de versiones con git y github
 // Corozo Angulo Milena Jazmin Prueba de control de versiones con git y github
 // fecha: 2026-04-16
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
