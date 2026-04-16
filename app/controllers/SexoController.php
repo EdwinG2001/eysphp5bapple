@@ -7,6 +7,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 // En SexoController.php
 // San Lucas Arroyo Edwin Guillermo
+//Soy Milena
 require_once $_SERVER['DOCUMENT_ROOT'] . '/eysphp5bapple/config/database.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/eysphp5bapple/app/models/Sexo.php';
 
