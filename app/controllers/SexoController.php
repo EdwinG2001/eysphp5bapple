@@ -6,6 +6,8 @@
 // Corozo Angulo Milena Jazmin Prueba de control de versiones con git y github
 // fecha: 2026-04-16
 
+// Franklin Caisa prueba de git hub
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
