@@ -5,7 +5,7 @@
 // San Lucas Arroyo Edwin Guillermo Prueba de control de versiones con git y github
 // Corozo Angulo Milena Jazmin Prueba de control de versiones con git y github
 // fecha: 2026-04-16
-
+// Caicedo Zuñiga Dario actualizacion con git
 // Franklin Caisa prueba de git hub
 
 ini_set('display_errors', 1);
